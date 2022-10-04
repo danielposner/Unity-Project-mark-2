@@ -729,6 +729,7 @@
 "Assets/Mapbox/Unity/Utilities/VectorExtensions.cs"
 "Assets/Scripts/ChangeSceneWithButton.cs"
 "Assets/Scripts/Dropdown Reset.cs"
+"Assets/Scripts/GPSLocation.cs"
 "Assets/Scripts/ImageSelector.cs"
 "Assets/Scripts/LoadImage.cs"
 "Assets/Scripts/PDFMenuScript.cs"

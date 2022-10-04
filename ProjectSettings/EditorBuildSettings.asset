@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/1Introduction.unity
+    path: Assets/Scenes/1z.5 TempLanding.unity
     guid: 70a94fb4148ff7649a2308167f24461c
   - enabled: 1
     path: Assets/Scenes/2CameraPage.unity
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/4PDFViewer.unity
     guid: 39cad9a9c4516ea4eaee52840de97603
+  - enabled: 1
+    path: Assets/Scenes/6RulesforGPS.unity
+    guid: d63dcf8c1a767614d99fe0f51b5b3218
   m_configObjects: {}

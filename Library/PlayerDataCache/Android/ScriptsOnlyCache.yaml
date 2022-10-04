@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ChangeSceneWithButton
+    - GPSLocation
     - ImageSelector
     - LoadImage
     - Mapbox.Examples.CameraBillboard
@@ -106,6 +107,9 @@ ScriptsOnlyBuild:
     fullTypeName: ChangeSceneWithButton
     methodName: LoadScene
   - assembly: Assembly-CSharp
+    fullTypeName: ChangeSceneWithButton
+    methodName: LoadScene
+  - assembly: Assembly-CSharp
     fullTypeName: PDFMenuScript
     methodName: OnPress
   - assembly: Assembly-CSharp
@@ -179,53 +183,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2548}
     - Class: 114
-      Script: {instanceID: 2662}
+      Script: {instanceID: 2664}
     - Class: 114
-      Script: {instanceID: 2696}
+      Script: {instanceID: 2698}
     - Class: 114
-      Script: {instanceID: 2898}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 2974}
+      Script: {instanceID: 2976}
     - Class: 114
-      Script: {instanceID: 3476}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 3568}
+      Script: {instanceID: 3570}
     - Class: 114
-      Script: {instanceID: 3694}
+      Script: {instanceID: 3696}
     - Class: 114
-      Script: {instanceID: 3942}
+      Script: {instanceID: 3944}
     - Class: 114
-      Script: {instanceID: 4340}
+      Script: {instanceID: 4342}
     - Class: 114
-      Script: {instanceID: 4428}
+      Script: {instanceID: 4430}
     - Class: 114
-      Script: {instanceID: 4714}
+      Script: {instanceID: 4716}
     - Class: 114
-      Script: {instanceID: 5018}
+      Script: {instanceID: 5020}
     - Class: 114
-      Script: {instanceID: 5782}
+      Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 5812}
+      Script: {instanceID: 5814}
     - Class: 114
-      Script: {instanceID: 5900}
+      Script: {instanceID: 5902}
     - Class: 114
-      Script: {instanceID: 6038}
+      Script: {instanceID: 6040}
     - Class: 114
-      Script: {instanceID: 6226}
+      Script: {instanceID: 6228}
     - Class: 114
-      Script: {instanceID: 6342}
+      Script: {instanceID: 6344}
     - Class: 114
-      Script: {instanceID: 6446}
+      Script: {instanceID: 6448}
     - Class: 114
-      Script: {instanceID: 6618}
+      Script: {instanceID: 6620}
     - Class: 114
-      Script: {instanceID: 6978}
+      Script: {instanceID: 6980}
     - Class: 114
-      Script: {instanceID: 7012}
+      Script: {instanceID: 7014}
     - Class: 114
-      Script: {instanceID: 7190}
+      Script: {instanceID: 7192}
     - Class: 114
-      Script: {instanceID: 7702}
+      Script: {instanceID: 7704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -282,31 +286,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2548}
     - Class: 114
-      Script: {instanceID: 2898}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 3476}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 4428}
+      Script: {instanceID: 4430}
     - Class: 114
-      Script: {instanceID: 5466}
+      Script: {instanceID: 5468}
     - Class: 114
-      Script: {instanceID: 5728}
+      Script: {instanceID: 5730}
     - Class: 114
-      Script: {instanceID: 5900}
+      Script: {instanceID: 5902}
     - Class: 114
-      Script: {instanceID: 5912}
+      Script: {instanceID: 5914}
     - Class: 114
-      Script: {instanceID: 6618}
+      Script: {instanceID: 6620}
     - Class: 114
-      Script: {instanceID: 6788}
+      Script: {instanceID: 6790}
     - Class: 114
-      Script: {instanceID: 6978}
+      Script: {instanceID: 6980}
     - Class: 114
-      Script: {instanceID: 7190}
+      Script: {instanceID: 7192}
     - Class: 114
-      Script: {instanceID: 7202}
+      Script: {instanceID: 7204}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -355,29 +359,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2548}
     - Class: 114
-      Script: {instanceID: 2898}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 3476}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 4428}
+      Script: {instanceID: 4430}
     - Class: 114
-      Script: {instanceID: 5466}
+      Script: {instanceID: 5468}
     - Class: 114
-      Script: {instanceID: 5728}
+      Script: {instanceID: 5730}
     - Class: 114
-      Script: {instanceID: 5900}
+      Script: {instanceID: 5902}
     - Class: 114
-      Script: {instanceID: 6618}
+      Script: {instanceID: 6620}
     - Class: 114
-      Script: {instanceID: 6788}
+      Script: {instanceID: 6790}
     - Class: 114
-      Script: {instanceID: 6978}
+      Script: {instanceID: 6980}
     - Class: 114
-      Script: {instanceID: 7190}
+      Script: {instanceID: 7192}
     - Class: 114
-      Script: {instanceID: 7202}
+      Script: {instanceID: 7204}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -424,21 +428,76 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2548}
     - Class: 114
-      Script: {instanceID: 2898}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 3476}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 3674}
+      Script: {instanceID: 3676}
     - Class: 114
-      Script: {instanceID: 5466}
+      Script: {instanceID: 5468}
     - Class: 114
-      Script: {instanceID: 6618}
+      Script: {instanceID: 6620}
     - Class: 114
-      Script: {instanceID: 6978}
+      Script: {instanceID: 6980}
     - Class: 114
-      Script: {instanceID: 7190}
+      Script: {instanceID: 7192}
     - Class: 114
-      Script: {instanceID: 9212}
+      Script: {instanceID: 9214}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/6RulesforGPS.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1640}
+    - Class: 114
+      Script: {instanceID: 1644}
+    - Class: 114
+      Script: {instanceID: 1646}
+    - Class: 114
+      Script: {instanceID: 2614}
+    - Class: 114
+      Script: {instanceID: 2900}
+    - Class: 114
+      Script: {instanceID: 5902}
+    - Class: 114
+      Script: {instanceID: 6620}
+    - Class: 114
+      Script: {instanceID: 6790}
+    - Class: 114
+      Script: {instanceID: 7192}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -678,6 +737,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.Location
     className: LocationArrayEditorLocationProvider
+  - hash:
+      serializedVersion: 2
+      Hash: 0af7a8edf246271a0317b1069fb334ed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GPSLocation
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1998,4 +2063,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/2CameraPage.unity
   - Assets/Scenes/3DirectionsAndMap.unity
   - Assets/Scenes/4PDFViewer.unity
+  - Assets/Scenes/6RulesforGPS.unity
   playerPath: C:/Users/User/Unity Project mark 2/Mk2.apk

@@ -17,7 +17,13 @@
 		string[] _locationStrings;
 		Vector2d[] _locations;
 
-		[SerializeField]
+		// Player Location
+		string[] _locationStrings2;
+        Vector2d[] _locations2;
+        List<GameObject> _spawnedObjects2;
+
+
+        [SerializeField]
 		float _spawnScale = 100f;
 
 		[SerializeField]
@@ -38,13 +44,44 @@
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 				_spawnedObjects.Add(instance);
 			}
-		}
+            // New Bit
 
-		private void Update()
+            string[] _locationStrings2 = { "-27.499582, 153.016217" };
+			_locations2 = new Vector2d[_locationStrings2.Length];
+            _spawnedObjects2 = new List<GameObject>();
+
+			for (int i = 0; i < _locationStrings2.Length; i++)
+			{
+				var locationString2 = _locationStrings2[i];
+				_locations[i] = Conversions.StringToLatLon(locationString2);
+				var instance = Instantiate(_markerPrefab);
+				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
+				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+				_spawnedObjects2.Add(instance);
+			}
+
+
+
+
+
+
+
+
+
+
+			}
+
+        private void Update()
 		{
-			int count = _spawnedObjects.Count;
+            //playerLocation = new Vector2d(-27.499582, 153.016217);
+
+
+            int count = _spawnedObjects.Count;
 			for (int i = 0; i < count; i++)
 			{
+
+				// Import New String Code Lat Long form
+				// Set up Conversions
 				var spawnedObject = _spawnedObjects[i];
 				var location = _locations[i];
 				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LoadImage : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // This loads in the image to a fixed size (1500/2750). The PDF files are really JPEG images, loaded into a rectangle
 
     public Canvas canvas;
     public string PDFstring;
@@ -21,12 +21,17 @@ public class LoadImage : MonoBehaviour
     {
         spriteString = PDFMenuScript.instance.PDFstring; // Placeholder from carryover
 
+        if (spriteString == "N/A")
+        {
+            spriteString = "N_A";
+        } // new
+
 
 
 
         GameObject newObject = new GameObject("ObjectName");
         RectTransform rectTransform = newObject.AddComponent<RectTransform>();
-        rectTransform.sizeDelta = new Vector2(1500, 2750);
+        rectTransform.sizeDelta = new Vector2(1800, 2750);
         Image image = newObject.AddComponent<Image>();
         //image.sprite = sprite;
         image.sprite = Resources.Load<Sprite>(spriteString);

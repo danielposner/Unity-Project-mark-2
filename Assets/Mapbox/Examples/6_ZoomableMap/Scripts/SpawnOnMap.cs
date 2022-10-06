@@ -9,6 +9,10 @@
 
 	public class SpawnOnMap : MonoBehaviour
 	{
+
+		public static PDFMenuScript instance;
+		public string gpsImport;
+
 		[SerializeField]
 		AbstractMap _map;
 
@@ -16,6 +20,12 @@
 		[Geocode]
 		string[] _locationStrings;
 		Vector2d[] _locations;
+
+		// Player Location
+		string[] _locationStrings2;
+		Vector2d[] _locations2;
+		List<GameObject> _spawnedObjects2;
+
 
 		[SerializeField]
 		float _spawnScale = 100f;
@@ -27,6 +37,10 @@
 
 		void Start()
 		{
+			gpsImport = PDFMenuScript.instance.gpsImport;
+			string[] _locationStrings = { gpsImport };
+			print(gpsImport + "WIBBLEWOO");
+			print("LOCLENGTH," + _locationStrings.Length);
 			_locations = new Vector2d[_locationStrings.Length];
 			_spawnedObjects = new List<GameObject>();
 			for (int i = 0; i < _locationStrings.Length; i++)
@@ -38,18 +52,50 @@
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 				_spawnedObjects.Add(instance);
 			}
+			// New Bit
+
+			//         string[] _locationStrings2 = { "-27.499582, 153.016217" };
+			//_locations2 = new Vector2d[_locationStrings2.Length];
+			//         _spawnedObjects2 = new List<GameObject>();
+
+			//for (int i = 0; i < _locationStrings2.Length; i++)
+			//{
+			//	var locationString2 = _locationStrings2[i];
+			//	_locations[i] = Conversions.StringToLatLon(locationString2);
+			//	instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
+			//	instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+			//}
+
+
+
+
+
+
+
+
+
+
 		}
 
-		private void Update()
-		{
-			int count = _spawnedObjects.Count;
-			for (int i = 0; i < count; i++)
-			{
-				var spawnedObject = _spawnedObjects[i];
-				var location = _locations[i];
-				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
-				spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-			}
-		}
+		//       private void Update()
+		//	{
+		//		//playerLocation = new Vector2d(-27.499582, 153.016217);
+
+		//		// Just do the GPS here and if its invalid, input an offscreen spot. If valid input coordinates
+
+		//		int count = _spawnedObjects.Count;
+		//		//print("SpawnCount" + count);
+		//		for (int i = 0; i < count; i++)
+		//		{
+
+		//			// Import New String Code Lat Long form
+		//			// Set up Conversions
+		//			var spawnedObject = _spawnedObjects[i];
+		//			var location = _locations[i];
+		//			spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
+		//			//spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+		//		}
+		//	}
+		//}
 	}
 }
